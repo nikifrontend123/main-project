@@ -1,5 +1,5 @@
 <template>
-  <div class="item">
+  <!-- <div class="item">
     <i>
       <slot name="icon"></slot>
     </i>
@@ -9,11 +9,11 @@
       </h3>
       <slot></slot>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <style scoped>
-.item {
+/* .item {
   margin-top: 2rem;
   display: flex;
 }
@@ -81,5 +81,8 @@ h3 {
   .item:last-of-type:after {
     display: none;
   }
-}
+} */
 </style>
+
+
+

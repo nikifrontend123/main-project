@@ -1,91 +1,95 @@
-<script setup>
+<script >
+export default {
+  // name: 'App',
+  components: {
+    RouterLink,
+    RouterView,
+    TopNavbar,
+    SideNavbar,
+  }
+}
+
+
+
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
+import SideNavbar from "./components/SideNavbar.vue";
+// import Footer from "./components/Footer.vue";
+import TopNavbar from "./components/TopNavbar.vue";
+// import home1 from "./components/home1.vue";
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
+  <div>
+    <div class="main-cont">
+      <div class="topnav">
+        <TopNavbar></TopNavbar>
+      </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <div class="box">
+        <div class="left">
+          <SideNavbar></SideNavbar>
+        </div>
+        <div class="right">
+          <div class="r-container">
+            <RouterView></RouterView>
+            <!-- <div class="content" style="height: 100vh;">
+              <h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+                alias? Error, omnis delectus magni magnam porro odit tempora
+                eveniet tempore!
+              </h2>
+              <home1></home1>
+            </div> -->
+            <!-- <div class="footerr">
+              <Footer></Footer>
+            </div> -->
+          </div>
+        </div>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+
+      </div>
     </div>
-  </header>
 
-  <RouterView />
+    <!-- <div class="d-flex justify-content-center w-80">
+      <RouterView></RouterView>
+    </div> -->
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
+.main-cont {
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.box {
+  width: 100%;
+  display: flex;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+.right {
+  width: 82%;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+.r-container {
+  /* width: 100%; */
+  position: absolute;
 }
 
-nav a:first-of-type {
-  border: 0;
+.footerr {
+  position: relative;
+  /* bottom:-361px; */
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+@media (max-width: 770px) {
+  .left {
+    display: none;
   }
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+@media (min-width: 770px) {
+  .topnav {
+    display: none;
   }
 }
 </style>
