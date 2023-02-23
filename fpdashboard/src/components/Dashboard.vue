@@ -17,10 +17,13 @@
         <label for="floatingInput">Name</label> -->
         <!-- <span style="color: red;" v-for="item in error" v-bind:key="item"> {{ item }} is invalid</span> -->
       </div>
-
+      <TextInput name="name" type="text" :floating="true" />
+      <TextInput name="email" type="email" :floating="true" />
+      <TextInput name="password" type="password" :floating="true" />
+      <br>
       <div class="radio">
-        <!-- <label style="margin-right: 10px;">Gender</label> -->
-        <!-- <div class="form-check form-check-inline">
+        <label style="margin-right: 10px;">Gender</label>
+        <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Male"
             v-model="form.Gender">
           <label class="form-check-label" for="inlineRadio1">Male</label>
@@ -30,14 +33,14 @@
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Female"
             v-model="form.Gender">
           <label class="form-check-label" for="inlineRadio2">Female</label>
-        </div> -->
-        <TextInput name="name" type="text" :floating="true" />
-        <TextInput name="email" type="email" :floating="true" />
-        <TextInput name="password" type="password" :floating="true" />
-        <TextInput name="phoneNo" type="number" :floating="true" />
-      </div>
+        </div>
 
-<!-- 
+      </div>
+      <br>
+      <TextInput name="phoneNo" type="number" :floating="true" />
+      <TextInput name="Message" type="text" :textareafloat="true" />
+
+      <!-- 
       <div class="form-floating mb-3">
         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" v-model="form.Email">
         <label for="floatingInput">Email address</label>
@@ -62,7 +65,7 @@ export default {
   components: {
     User,
     TextInput
-},
+  },
   data() {
     return {
       form: {
