@@ -33,14 +33,6 @@ import TopNavbar from "./components/TopNavbar.vue";
         <div class="right">
           <div class="r-container">
             <RouterView></RouterView>
-            <!-- <div class="content" style="height: 100vh;">
-              <h2>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-                alias? Error, omnis delectus magni magnam porro odit tempora
-                eveniet tempore!
-              </h2>
-              <home1></home1>
-            </div> -->
             <!-- <div class="footerr">
               <Footer></Footer>
             </div> -->
