@@ -13,10 +13,6 @@
             <input :type="type" :name="name" class="form-control" id="exampleFormControlInput1" :placeholder="name"
                 required>
         </div>
-       
-
-
-
     </div>
 </template>
 <script>

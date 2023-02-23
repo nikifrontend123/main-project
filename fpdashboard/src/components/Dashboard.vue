@@ -38,7 +38,7 @@
       </div>
       <br>
       <TextInput name="phoneNo" type="number" :floating="true" />
-      <TextInput name="Message" type="text" :textareafloat="true" />
+      <Textareai name="Message" type="text" :textareafloat="false"  />
       <!-- <TextInput name="Message" type="text"  :textarea="true" :floating="false" /> -->
       
       <!-- 
@@ -59,13 +59,15 @@
 </template>
 <script>
 import TextInput from './Forms/TextInput.vue';
+import Textareai from './Forms/Textareai.vue';
 import User from './User.vue';
 
 export default {
   name: 'dashboard',
   components: {
     User,
-    TextInput
+    TextInput,
+    Textareai
   },
   data() {
     return {
