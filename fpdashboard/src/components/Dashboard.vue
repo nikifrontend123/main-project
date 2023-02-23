@@ -39,7 +39,8 @@
       <br>
       <TextInput name="phoneNo" type="number" :floating="true" />
       <TextInput name="Message" type="text" :textareafloat="true" />
-
+      <!-- <TextInput name="Message" type="text"  :textarea="true" :floating="false" /> -->
+      
       <!-- 
       <div class="form-floating mb-3">
         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" v-model="form.Email">
