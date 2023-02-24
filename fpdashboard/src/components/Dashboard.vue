@@ -1,99 +1,89 @@
 <template>
   <ul>
-    <li style="color: red;" v-for="item in error" v-bind:key="item">
+    <li style="color: red" v-for="item in error" v-bind:key="item">
       {{ item }} is invalid
     </li>
   </ul>
   <div class="main">
+    <!-- <img src="./assets/ss.png" style="width: 200px; height: 200px;">
+    <p>hello</p>
+     -->
+
     <!-- <p>{{ form }}</p> -->
 
-
-
     <form @submit="checkForm" method="post">
-
-      <div class="form-floating mb-3">
-        <!-- <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" v-model="form.Name"
-          required>
-        <label for="floatingInput">Name</label> -->
-        <!-- <span style="color: red;" v-for="item in error" v-bind:key="item"> {{ item }} is invalid</span> -->
-      </div>
-      <TextInput name="name" type="text" :floating="true" />
-      <TextInput name="email" type="email" :floating="true" />
-      <TextInput name="password" type="password" :floating="true" />
-      <br>
+      <h2>Form</h2>
+      <TextInput name="name" type="text" />
+      <TextInput name="email" type="email" design="inline" />
+      <TextInput name="password" type="password" design="floating" />
+      <br />
       <div class="radio">
-        <label style="margin-right: 10px;">Gender</label>
+        <label style="margin-right: 10px">Gender</label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Male"
-            v-model="form.Gender">
+            v-model="form.Gender" />
           <label class="form-check-label" for="inlineRadio1">Male</label>
-
         </div>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Female"
-            v-model="form.Gender">
+            v-model="form.Gender" />
           <label class="form-check-label" for="inlineRadio2">Female</label>
         </div>
-
       </div>
-      <br>
-      <TextInput name="phoneNo" type="number" :floating="true" />
-      <Textareai name="Message" type="text" :textareafloat="false"  />
-      <!-- <TextInput name="Message" type="text"  :textarea="true" :floating="false" /> -->
-      
-      <!-- 
-      <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" v-model="form.Email">
-        <label for="floatingInput">Email address</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" v-model="form.Password">
-        <label for="floatingPassword">Password</label>
-      </div> -->
-      <!-- <button v-on:click="login">Login</button> -->
-      <br>
-      <input class="btn btn-primary" type="submit" value="">
-
+      <br />
+      <TextInput name="phoneNo" type="number" design="floating" />
+      <Textareai name="Message" type="text" design="inline" />
+      <br />
+      <input class="btn btn-primary" type="submit" value="" />
+      <CustomBtn name="click me" type="button" design="link" />
     </form>
+    <SelectCard/>
+
+    <img :src="Image" alt="" width="400px" height="400px">
   </div>
 </template>
 <script>
-import TextInput from './Forms/TextInput.vue';
-import Textareai from './Forms/Textareai.vue';
-import User from './User.vue';
+import TextInput from "./Forms/TextInput.vue";
+import Textareai from "./Forms/Textareai.vue";
+import User from "./User.vue";
+import CustomBtn from "./buttons/CustomBtn.vue";
+import SelectCard from "./selectTableCard/SelectCard.vue";
+import Image from '../assets/tshirt.jpg';
 
 export default {
-  name: 'dashboard',
+  name: "dashboard",
   components: {
+    Image,
     User,
     TextInput,
-    Textareai
+    Textareai,
+    CustomBtn,
+    SelectCard
   },
   data() {
     return {
       form: {
-        Name: '',
-        Gender: '',
-        Email: '',
-        Password: '',
+        Name: "",
+        Gender: "",
+        Email: "",
+        Password: "",
       },
-      error: []
-    }
+      error: [],
+    };
   },
   methods: {
     checkForm() {
-      this.error = []
+      this.error = [];
       for (const item in this.form) {
         if (this.form[item] === "" || this.form[item].length === 0) {
-          this.error.push(item)
+          this.error.push(item);
         }
-
       }
       if (this.error.length === 0) {
-        alert("Data has been submitted")
+        alert("Data has been submitted");
       }
-      console.warn(this.error)
-    }
+      console.warn(this.error);
+    },
   },
 
   // computed: {
@@ -108,11 +98,23 @@ export default {
 .main {
   margin: 20px;
   padding: 20px;
-  width: 100%;
+  /* width: 100%; */
   /* height: 100vh; */
   display: flex;
   justify-content: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+
+form {
+  padding: 10px 60px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
- 

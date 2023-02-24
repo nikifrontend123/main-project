@@ -4,6 +4,7 @@ import SideNavbar from "../components/SideNavbar.vue";
 import Home1 from "../components/home1.vue";
 import Dashboard from "../components/Dashboard.vue";
 
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -35,6 +36,7 @@ const router = createRouter({
       name: "dashboard",
       component: Dashboard
     },
+    
   ],
 });
 

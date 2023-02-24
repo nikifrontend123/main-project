@@ -9,7 +9,6 @@ const store = createStore({
             { name: 'Kdfdff', email: 'kendrick@Test.com', active: true },
 
         ],
-       
     },
 
     getters: {

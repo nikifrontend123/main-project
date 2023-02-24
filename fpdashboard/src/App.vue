@@ -60,12 +60,11 @@ import TopNavbar from "./components/TopNavbar.vue";
 }
 
 .right {
-  width: 82%;
+  width: 100%;
 }
 
 .r-container {
-  /* width: 100%; */
-  position: absolute;
+  width: 100%;
 }
 
 .footerr {
