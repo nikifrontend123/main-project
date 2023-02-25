@@ -61,6 +61,7 @@ import TopNavbar from "./components/TopNavbar.vue";
 
 .right {
   width: 100%;
+  background-color: #04192d;
 }
 
 .r-container {

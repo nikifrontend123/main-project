@@ -17,6 +17,9 @@ export default {
 }
 </script>
 <style>
+*{
+    color: #fff;
+}
 .cont{
     display: flex;
     justify-content: center;

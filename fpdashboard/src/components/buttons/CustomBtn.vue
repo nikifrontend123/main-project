@@ -13,7 +13,7 @@
 
         <button v-else type="button" class="btn btn-dark">{{ name }}</button>
     </div>
-    1
+    
 </template>
 
 <script>

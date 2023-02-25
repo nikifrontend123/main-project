@@ -3,7 +3,8 @@ import HomeView from "../views/HomeView.vue";
 import SideNavbar from "../components/SideNavbar.vue";
 import Home1 from "../components/home1.vue";
 import Dashboard from "../components/Dashboard.vue";
-
+import CheckBox from "../components/CustomCheckBox/CheckBox12.vue";
+import Test from "../components/test.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,14 +13,6 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView
-    },
-    {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue"),
     },
     {
       path:"/sidenavbar",
@@ -35,6 +28,16 @@ const router = createRouter({
       path:"/dashboard",
       name: "dashboard",
       component: Dashboard
+    },
+    {
+      path:"/checkbox",
+      name: "checkbox",
+      component: CheckBox
+    },
+    {
+      path:"/test",
+      name: "test",
+      component: Test
     },
     
   ],

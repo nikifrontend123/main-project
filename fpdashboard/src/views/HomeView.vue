@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Home VIEW</h1>
+    <h1>Welcome to Home Page!!!!! :)</h1>
   </main>
 </template>
 

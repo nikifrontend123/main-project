@@ -37,9 +37,9 @@
       <input class="btn btn-primary" type="submit" value="" />
       <CustomBtn name="click me" type="button" design="link" />
     </form>
-    <SelectCard/>
+    <Select />
 
-    <img :src="Image" alt="" width="400px" height="400px">
+    <!-- <img :src="Image" alt="" width="400px" height="400px"> -->
   </div>
 </template>
 <script>
@@ -47,8 +47,8 @@ import TextInput from "./Forms/TextInput.vue";
 import Textareai from "./Forms/Textareai.vue";
 import User from "./User.vue";
 import CustomBtn from "./buttons/CustomBtn.vue";
-import SelectCard from "./selectTableCard/SelectCard.vue";
 import Image from '../assets/tshirt.jpg';
+import Select from "./Select/Select.vue";
 
 export default {
   name: "dashboard",
@@ -58,8 +58,8 @@ export default {
     TextInput,
     Textareai,
     CustomBtn,
-    SelectCard
-  },
+    Select
+},
   data() {
     return {
       form: {
@@ -94,22 +94,19 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .main {
   margin: 20px;
   padding: 20px;
-  /* width: 100%; */
-  /* height: 100vh; */
   display: flex;
   justify-content: center;
-  /* border: 1px solid black; */
-  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 
 form {
+  background-color: rgb(35, 33, 33);
   padding: 10px 60px;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(157, 151, 151, 0.35) 0px 5px 15px;
 }
 
 h2 {

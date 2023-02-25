@@ -9,7 +9,7 @@
       </a>
       <hr />
       <ul class="nav nav-pills flex-column mb-auto">
-        <RouterLink to="/home1" class="nav-link active" aria-current="page">
+        <RouterLink to="/home1" class="nav-link" aria-current="page">
           <li class="nav-item">
             <svg class="bi pe-none me-2" width="16" height="16"></svg>Home
           </li>
@@ -22,22 +22,22 @@
             Dashboard
           </li>
         </RouterLink>
+        <RouterLink to="/checkbox" class="nav-link text-white">
         <li>
-          <a href="#" class="nav-link text-white">
             <svg class="bi pe-none me-2" width="16" height="16">
               <use xlink:href="#table"></use>
             </svg>
             Orders
-          </a>
         </li>
-        <li>
-          <a href="#" class="nav-link text-white">
+      </RouterLink>
+      <RouterLink to="/test" class="nav-link text-white">
+        <li>          
             <svg class="bi pe-none me-2" width="16" height="16">
               <use xlink:href="#grid"></use>
             </svg>
-            Products
-          </a>
+            Products  
         </li>
+      </RouterLink>
         <li>
           <a href="#" class="nav-link text-white">
             <svg class="bi pe-none me-2" width="16" height="16">
